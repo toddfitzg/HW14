@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aliens-R-Us</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://unpkg.com/simple-statistics@5.0.0/dist/simple-statistics.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- <style>
+    body {
+      background-color: unset;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+    tbody>tr:nth-child(even){background-color: #f2f2f2 !important}
+    tbody>tr:nth-child(odd){background-color: #fff !important}
+
+  </style> -->
+</head>
+
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron" )>
+          <h1>www.ALIENS-R-REAL.com</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="form-group">
+        <input type="text" class="form-control" id="datetime" placeholder="M/D/YYYY">
+        <button id="search" class="btn btn-primary" type="submit" >Search UFO sightings by DateTime</button>
+      </div>
+    </div> 
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped" id="ufo-table">
+        <thead>
+          <tr>
+            <th>DateTime</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
+            <th>Shape</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody> </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="data.js" ></script>
+  <script src="ufotable.js" ></script>  
+  </body>
+</html>
+      

@@ -25,7 +25,25 @@ function buildTable(ufoData) {
 function handleSort() {
     Plotly.d3.event.preventDefault();
 
-    var search_date = Plotly.d3.select("#dateInput").node().value;
+    var search_date = Plotly.d3.select("#datetime").node().value.trim();
+    //clear form
+
+    //Plotly.d3.select("#datetime").node().value.trim() = "";
+    //return(console.log(search_date));
+
+    // filter data
+    filteredData = dataSet.filter(function(ufoData) {
+        var sightingDateTime = ufoData.datetime;
+        //console.log(sightingDateTime);
+        // If true, add the dateTime to the sightingDateTime, otherwise don't add it to sightingDateTime
+        return sightingDateTime === search_date;
+        console.log(sightingDateTime)
+      });
+      buildTable(filteredData);
+
 }
+
+// Add event listener for submit button
+Plotly.d3.select("#dateInput").on("click", handleSort);
 
 buildTable(ufoData);
